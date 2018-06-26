@@ -162,8 +162,9 @@ def get_subject_file(subject_file):
         sbj_f.close()
     except IOError:
         print("Subject file '%s' could not be accessed; using default"
-               % subject_file)
+              % subject_file)
     return subject
+
 
 groups_file = '.iam/groups'
 default_groups = ['Admin',
@@ -179,7 +180,7 @@ def get_groups_file(groups_file):
         grp_f.close()
     except IOError:
         print("Groups file '%s' could not be accessed; using default"
-               % grous_file)
+              % grous_file)
     return groups
 
 ##
