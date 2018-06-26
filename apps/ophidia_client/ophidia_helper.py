@@ -87,6 +87,7 @@ def grab_workflow(fileStream):
 
     return values
 
+
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(

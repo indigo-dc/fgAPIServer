@@ -144,9 +144,10 @@ def get_token_file(token_file):
         token = tkn_f.read()[:-1]
         tkn_f.close()
     except IOError:
-        print ("Token file '%s' could not be accessed; using default"
-               % token_file)
+        print("Token file '%s' could not be accessed; using default"
+              % token_file)
     return token
+
 
 subject_file = '.iam/subject'
 default_subject = '98e3009e-e39b-11e6-bcba-5eef910c8578'
@@ -160,7 +161,7 @@ def get_subject_file(subject_file):
         subject = sbj_f.read()[:-1]
         sbj_f.close()
     except IOError:
-        print ("Subject file '%s' could not be accessed; using default"
+        print("Subject file '%s' could not be accessed; using default"
                % subject_file)
     return subject
 
@@ -177,7 +178,7 @@ def get_groups_file(groups_file):
         groups = [grp[:-1] for grp in grp_f]
         grp_f.close()
     except IOError:
-        print ("Groups file '%s' could not be accessed; using default"
+        print("Groups file '%s' could not be accessed; using default"
                % grous_file)
     return groups
 
