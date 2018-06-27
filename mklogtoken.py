@@ -60,15 +60,16 @@ def token_info(token):
         tinfo_fields[1].split("=")[1], \
         tinfo_fields[2].split("=")[1]
 
+
 if __name__ == "__main__":
     token = token_encode(key, username, password)
     tinfo = token_decode(key, token)
-    print ("Token with key: '%s'; "
-           "encoding: 'username:=%s:"
-           "password=%s:"
-           "timestamp=<issue_time>' is '%s'"
-           % (key, username, password, token))
+    print("Token with key: '%s'; "
+          "encoding: 'username:=%s:"
+          "password=%s:"
+          "timestamp=<issue_time>' is '%s'"
+          % (key, username, password, token))
     print "Decoded token: '%s' -> '%s'" % (token, tinfo)
     username, password, timestamp = token_info(token)
-    print ("Token info: 'username=%s:password=%s:timestamp=%s'"
-           % (username, password, timestamp))
+    print("Token info: 'username=%s:password=%s:timestamp=%s'"
+          % (username, password, timestamp))
